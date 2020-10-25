@@ -170,7 +170,7 @@ const readLocalStorage = () => {
 
     logArray = JSON.parse(window.localStorage.getItem('logs'));
     logArrayId = JSON.parse(window.localStorage.getItem('logsId'));
-    console.log(logArray);
+    // console.log(logArray);
 
     lotsId = JSON.parse(window.localStorage.getItem('lotsId'));
 
@@ -185,13 +185,13 @@ const setLog = (arr) => {
   const NEW_ARR = arr.slice();
   logArray.push(NEW_ARR);
   logArrayId = logArray.length - 1;
-  console.log(logArray);
+  // console.log(logArray);
 };
 
 const logBack = () => {
   if (logArrayId > 0) {
     lotArray = logArray[--logArrayId].slice();
-    console.log(lotArray);
+    // console.log(lotArray);
     setLocalStorage(lotArray, logArray);
     displayLots(lotArray);
   }
@@ -200,7 +200,7 @@ const logBack = () => {
 const logForward = () => {
   if (logArrayId < logArray.length - 1) {
     lotArray = logArray[++logArrayId].slice();
-    console.log(lotArray);
+    // console.log(lotArray);
     setLocalStorage(lotArray, logArray);
     displayLots(lotArray);
   }
