@@ -1,0 +1,16 @@
+# Operating system files and folders
+.DS_Store
+Thumbs.db
+
+# Editor files
+.idea
+*.sublime*
+.vscode
+
+# Support files
+*.log*
+node_modules/
+reports/
+
+# Folder with collected project files
+# build/

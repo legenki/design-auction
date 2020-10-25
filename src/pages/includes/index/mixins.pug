@@ -1,0 +1,9 @@
+mixin icon(icon, name)
+  svg(class= icon): use(xlink:href="img/sprite.svg#" + name)
+
+mixin auc-item(modif)
+  .auc__item(class= modif)
+    input.auc__lot(type="text" title="Lot name")
+    input.auc__total-sum(type="text" oninput="this.value=this.value.replace(/[^0-9]^./g,'');" title="Total")
+    input.auc__current-sum(type="text" oninput="this.value=this.value.replace(/[^0-9]^./g,'');" title="Current sum")
+    button.auc__add-sum(add-sum title="Add sum"): +icon("auc__icon", "plus")
