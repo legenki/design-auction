@@ -3,10 +3,7 @@
   height: 100%;
   min-height: 100vh;
   padding: 5rem .5rem 0 .5rem;
-
-  background: url('../img/bg.png'), $color-bg;
-
-  background-blend-mode: multiply;
+  background: $color-bg;
 }
 
 .auc__inner {
