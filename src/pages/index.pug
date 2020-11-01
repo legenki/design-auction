@@ -14,7 +14,7 @@ block content
           +auc-item("auc__item--second")
           +auc-item
           +auc-item
-        button.auc__add-lot(add-lot title="Add Lot"): +icon("auc__icon", "plus")
+          +auc-item
       .auc__right
         p.auc__total
           |Bank:
@@ -32,6 +32,6 @@ block content
             button.auc__reset(reset) Reset
           .auc__timer-controllers
             button.auc__timer-btn(plus-one-min) +1
-            button.auc__timer-btn(plus-two-min) +2
             button.auc__timer-btn(ten-min) =10
             button.auc__timer-btn(minus-one-min) -1
+            button.auc__add-lot(add-lot title="Add Lot"): +icon("auc__icon", "plus")
