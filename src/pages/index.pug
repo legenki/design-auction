@@ -6,6 +6,10 @@ block content
       .auc__left
         .auc__controllers
           button.auc__clear(title="Clear" clear): +icon("auc__icon", "reset")
+          p.auc__total
+            | Bank:
+            |
+            span(total) 0
           .auc__edit-wrapper
             button.auc__edit(title="Undo" auc-back): +icon("auc__icon auc__icon--revert", "arrow")
             button.auc__edit(title="Redo" auc-forward): +icon("auc__icon", "arrow")
@@ -15,11 +19,8 @@ block content
           +auc-item
           +auc-item
           +auc-item
+          +auc-item
       .auc__right
-        p.auc__total
-          |Bank:
-          |
-          span(total) 0
         .auc__timer-wrapper
           .auc__timer
             button.auc__start(start)
@@ -27,11 +28,12 @@ block content
               span(minutes) 10
               |:
               span(seconds) 00
-              //- |.
-              //- span(mseconds) 000
+              // |.
+              // span(mseconds) 000
             button.auc__reset(reset) Reset
           .auc__timer-controllers
             button.auc__timer-btn(plus-one-min) +1
+            button.auc__timer-btn(plus-two-min) +2
             button.auc__timer-btn(ten-min) =10
             button.auc__timer-btn(minus-one-min) -1
-            button.auc__add-lot(add-lot title="Add Lot"): +icon("auc__icon", "plus")
+        button.auc__add-lot(add-lot title="Add Lot"): +icon("auc__icon", "plus") Add Lot
